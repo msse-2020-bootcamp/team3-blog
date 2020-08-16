@@ -37,6 +37,12 @@ The second method is pytest, which is frequently used for python code testing. T
 
 Some special techniques like decoration are also covered in the lecture. 
 
+<center>
+
+<img src = 'https://raw.githubusercontent.com/msse-2020-bootcamp/template-blog/master/images/msse-logo-bg.svg'>  
+
+</center>
+
    
 
 
