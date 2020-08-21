@@ -1,0 +1,14 @@
+---
+layout: post
+title: "C++ Data Types and Introduction to Group Homework"
+author: Muhan Zhang
+---
+
+In this blog post, I first will talk about some unique data types that differs C++ from Python. These data types and C++ usage were introduced in the last few days, and I will now make a brief summary of the lectures these days.
+
+I once used C programming language and I found arrays and pointers were difficult to handle. Arrays sometimes perform like a list in Python but with fixated number of elements. This assignment should be done in the first few definitions of data type, which is call 'Initialization' in C programming. Pointers use address to track the changes of pointed variables, which is somewhat the core of C programming. Using pointers instead of data variables themselves can make a large difference in function calling. When a function is called in `main` function with arguments of pointers, we don't need to copy a new variable to store those changed values, as pointers change the variable value itself in place although pointers are temperorily used in another function. While in C++, pointers and arrays still act the same as the ones in C language, some different data types that perform better sometimes can be alternatively used, such as standard arrays `std::array`, vectors `std::vector`, and references `*data type* & *variable name*`. These are good substitutions to involved arrays and pointers. For example, using `std::array` can simply copy array values and parametrize. Dynamically allocated memory spaces in C++ can make better the appending of values to arrays of unknown length, costing much less than simply create an array of a large length. In spite of these simple uses, it is still difficult for me to grasp the usage of references in function calling.
+
+For our two-day group homework, the task was to re-code our Monte Carlo simulation python file into C++ format. When I was coding, the difficulty was around the default value setting of `box_length`. I finally settled this default value to 100, which is a rather big number for the length of box. However, this still confuses me whether this choice is appropriate. For the length of box, it is impossible to set this value to 10 or even less, because this would largely influence the calculated distance due to periodic boundary conditions. This is my only reason to set it to a large value, but I don't figure it out whether big value of `box_length` may cause another problem. To set the constant value of pi, I chose to set `PI` by:
+        # define PI 3.1415926
+
+This method is simply a string conversion, rather than set a constant variable pi at 3.1415926. This method may generally have some risks but I think it is valid or unambiguous in this code file, and save some memories. However, I would be willing to get some suggestions on whether this default setting is proper!

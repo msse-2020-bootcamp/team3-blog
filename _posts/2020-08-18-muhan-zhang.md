@@ -11,7 +11,7 @@ $$ \int_a^b f(x) dx = \lim_{\lambda \to 0} \sum_{i=1}^n f(\xi_i) \Delta x_i $$
 As is the origin of Riemann sum integration.
 
 In our program, two functions are created apart from main function, calculate_y function to directly calculate y value according to the integrand and variable x, calculate_integral function as integration function using Riemann sum method with arguments a and b to limit the integral interval. In calculate_y function, double type is applied to both argument x and return value. We devised a scheme to fixate number of points of 1000, and the width of rectangle dx will be flexibly confirmed by calculating:
-$$ dx = \frac{b - a}{n_points} $$
+$$ dx = \frac{b - a}{n_{points}} $$
 where dx, a and b are double data type, and n_points is assigned integer.
 
 The value of height of rectangle (i.e. Y value) is key to success of integration. We use for loop with each step of X value increasing dx, while X value starts at a + dx/2. This can determine the midpoint of each rectangle.
