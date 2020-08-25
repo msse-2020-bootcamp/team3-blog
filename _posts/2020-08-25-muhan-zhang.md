@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Intro to our final project"
+author: Muhan Zhang
+---
+
+Finally, it's my time to deliver our final project in detail after it ended last week! We made the choice of the final project to code performance assessment, which compares three different code versions -- Python Standard Library(PSL), NumPy and C++. These included some work first to homogenize our three integrated codes. This work was done by me, and I thought this work was fundamental to make reasonable comparisons. Other than some inevitable code parts to differ, such as library implementation and random number generation, I made three codes close to identical ones.
+
+On the choice of selecting variables to make assessments, we picked up the varying number of steps. We set the values of number of steps big to avoid some intrinsic cost of time, with values of 10000, 20000, 30000. Library matplotlib was used to plot the relationship of average cost of time versus number of steps. We found that the relationship is close to linear when we chose number of steps as variable. I made the idea to fit the data to a linear function. We implemented NumPy library with function `numpy.polyfit(x, y, deg)` to make a linear fitting. The slope just showed a quantitative relationship between two variables, whose value was bigger when the performance was relatively slow. The PSL code had the biggest value of slope in linear function, showing the worst performance. Library implementation and interpretation cost a lot of time, compared with C++, a compiled language. NumPy showed a great performance even though it is implemented in Python. We both thought that NumPy would be much more powerful in a more involved code.
+
+I will give my sincere thanks to Xudong for his great presentation and slides making. The slides of introducing Monte Carlo and Software Engineering were completely and perfectly done by himself. The presentation showed an amazing project, and I would owed this achievement greatly to him. I made parts of project conducting, including code homogenization, linear fitting and plotting. The corresponding slides were complete by me. In all, it is a terrific bootcamp and presentation, thanks to Dr Nash and Dr Pritchard for their amazing lectures and Q&As!
